@@ -1,1 +1,32 @@
-<p>artist works!</p>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>
+                Nombre artístico
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Biografía
+            </th>
+            <th>
+                Lugar de nacimiento
+            </th>
+        </tr>
+        <tr *ngFor="let artist of artists | async">   
+            <td>
+                {{artist.name}}
+            </td>
+            <td>
+                {{artist.realname}}
+            </td>
+            <td>
+                {{artist.biography}}
+            </td>
+            <td>
+                {{artist.bornlocationname}}
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,1 +1,38 @@
-<p>concert works!</p>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Máximo asistentes
+            </th>
+            <th>
+                Mínimo asistentes
+            </th>
+            <th>
+                ¿Cuándo?
+            </th>
+        </tr>
+        <tr *ngFor="let concert of concerts | async">
+            <td>
+                {{concert.name}}
+            </td>
+            <td>
+                {{concert.description}}
+            </td>
+            <td>
+                {{concert.maxattendees}}
+            </td>
+            <td>
+                {{concert.minattendees}}
+            </td>
+            <td>
+                {{concert.time}}
+            </td>
+        </tr>
+    </table>
+</div>

@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ConcertComponent } from './concert/concert.component';
 import { ArtistComponent } from './artist/artist.component';
+import { ArtistserviceService } from './artistservice.service';
+import { ConcertserviceService } from './concertservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { ArtistComponent } from './artist/artist.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ArtistserviceService, ConcertserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
