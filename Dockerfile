@@ -6,8 +6,6 @@ ARG APP=concerts-front
 ENV ENV ${ENV}
 ENV APP ${APP}
 
-WORKDIR /
-
 # Instala y construye el Angular App
 RUN npm install
 RUN npm run build --prod
