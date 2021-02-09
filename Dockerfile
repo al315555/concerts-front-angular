@@ -1,7 +1,7 @@
 FROM node:latest as node
 
 ARG ENV=prod
-ARG APP=concerts-front-angular
+ARG APP=concerts-front
 
 ENV ENV ${ENV}
 ENV APP ${APP}
@@ -10,7 +10,7 @@ WORKDIR /app
 COPY ./ /app/
 
 # Instala y construye el Angular App
-RUN npm ci
+RUN npm install
 RUN npm run build --prod
 RUN mv /app/dist/${APP}/* /app/dist/
 
