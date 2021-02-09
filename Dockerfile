@@ -1,7 +1,7 @@
 FROM node:latest as node
 
 ARG ENV=prod
-ARG APP=angular-docker
+ARG APP=concerts-front-angular
 
 ENV ENV ${ENV}
 ENV APP ${APP}
